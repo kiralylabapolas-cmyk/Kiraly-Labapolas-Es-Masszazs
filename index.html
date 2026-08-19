@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="massage.css">
     <script src="massage.js" defer></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
@@ -43,16 +47,21 @@
                 <span>KUCKÓ</span>
             </div>
 
-            <nav>
+            <nav id="mainNav">
                 <ul>
                     <li><a href="#navbar">Főoldal</a></li>
                     <li><a href="#about">Rólam</a></li>
                     <li><a href="#services">Masszázsok</a></li>
+                    <li><a href="#pedicure">Pedikűr</a></li>
                     <li><a href="#contact">Kapcsolat</a></li>
                 </ul>
             </nav>
 
             <a href="#" class="btn">Időpontfoglalás</a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="mainNav">
+                <span></span><span></span><span></span>
+            </button>
 
         </div>
     </header>
@@ -162,14 +171,14 @@
                 <div class="card-content">
                     <h3>Tibeti méregtelenítő mézmasszázs</h3>
                     <p>Intenzív tisztító és salaktalanító kezelés a méz erejével.</p>
-                    
-                    <div class="info-box">
-                        <p>A tibeti méregtelenítő mézmasszázs egy különleges energetizáló és bőrfeszesítő kezelés, amely a méz erejével támogatja a szervezet tisztulását és javítja a közérzetet.</p>
-                    </div>
-                    
+
                     <div class="card-footer">
                         <button class="info-btn">Részletek</button>
                         <span class="price">10 000 Ft</span>
+                    </div>
+
+                    <div class="info-box">
+                        <p>A tibeti méregtelenítő mézmasszázs egy különleges energetizáló és bőrfeszesítő kezelés, amely a méz erejével támogatja a szervezet tisztulását és javítja a közérzetet.</p>
                     </div>
 
                 </div>
@@ -255,7 +264,7 @@
 
                     <div class="card-footer">
                         <button class="info-btn">Részletek</button>
-                        <span class="price">?</span>
+                        <span class="price">5 500 Ft</span>
                     </div>
 
                     <div class="info-box">
@@ -359,6 +368,102 @@
 
     </section>
 
+    <!-- ÁTMENET: Masszázs -> Pedikűr -->
+
+    <div class="section-transition">
+        <div class="transition-content">
+            <span class="transition-line"></span>
+            <span class="transition-label">Speciális lábápolás &amp; Pedikűr</span>
+            <span class="transition-line"></span>
+        </div>
+    </div>
+
+    <!-- PEDIKŰR -->
+
+    <section class="services pedicure-section" id="pedicure">
+
+        <h2>Pedikűr</h2>
+        <img src="images/icons/line.png" alt="Elválasztó vonal" class="divider">
+        <p class="section-intro">Kényeztető lábápolás minden alkalomra – a mindennapi frissítéstől a problémás lábak szakszerű kezeléséig.</p>
+
+        <div class="service-grid pedicure-grid">
+
+            <div class="card pedicure-card">
+                <div class="pedicure-card-visual" aria-hidden="true"><span class="pedicure-icon">✦</span></div>
+                <div class="card-content">
+                    <h3>SPA pedikűr</h3>
+                    <p>Kényeztető lábápolás a mindennapokra.</p>
+
+                    <div class="card-footer">
+                        <button class="info-btn">Részletek</button>
+                        <span class="price">10 500 Ft</span>
+                    </div>
+
+                    <div class="info-box">
+                        <p>Lábáztatás, Holt-tengeri sós lábáztatás, SPA bőrradírozás, végül SPA krémes hidratálás.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card pedicure-card">
+                <div class="pedicure-card-visual" aria-hidden="true"><span class="pedicure-icon">✦</span></div>
+                <div class="card-content">
+                    <h3>Esztétikai pedikűr lakkozás nélkül</h3>
+                    <p>Ápolt, rendezett lábak lakkozás nélkül.</p>
+
+                    <div class="card-footer">
+                        <button class="info-btn">Részletek</button>
+                        <span class="price">9 000 Ft</span>
+                    </div>
+
+                    <div class="info-box">
+                        <p>Körmök formázása, bőrkeményedés eltávolítása, hidratáló krémezés.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card pedicure-card">
+                <div class="pedicure-card-visual" aria-hidden="true"><span class="pedicure-icon">✦</span></div>
+                <div class="card-content">
+                    <h3>Esztétikai pedikűr + egyszínű géllak</h3>
+                    <p>Teljes körű lábápolás tartós géllakkal.</p>
+
+                    <div class="card-footer">
+                        <button class="info-btn">Részletek</button>
+                        <span class="price">11 000 Ft</span>
+                    </div>
+
+                    <div class="info-box">
+                        <p>Esztétikai pedikűr kezelés, kiegészítve tartós, egyszínű géllakk felvitelével.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card pedicure-card">
+                <div class="pedicure-card-visual" aria-hidden="true"><span class="pedicure-icon">✦</span></div>
+                <div class="card-content">
+                    <h3>Speciális lábápolás</h3>
+                    <p>Gyógy-jellegű pedikűr, problémás láb kezelése.</p>
+
+                    <div class="card-footer">
+                        <button class="info-btn">Részletek</button>
+                        <span class="price">10 800 Ft-tól</span>
+                    </div>
+
+                    <div class="info-box">
+                        <p>Gyógypedikűr, problémás láb kezelése: extrém bőrkeményedés, megvastagodott köröm, gombás köröm, tyúkszemkezelés, tehermentesítés, otthoni tanácsadás. Végleges árak a konzultációt követően.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
     <!-- Contact -->
 
     <footer class="site-footer" id="contact">
@@ -367,6 +472,7 @@
             <h4>Linkek</h4>
             <ul>
                 <li><a href="#services">Masszázsok</a></li>
+                <li><a href="#pedicure">Pedikűr</a></li>
                 <li><a href="#about">Rólam</a></li>
             </ul>
         </div>
@@ -376,23 +482,24 @@
             <ul>
                 <li><a href="fizetesi-modok.html">Fizetési módok</a></li>
                 <li><a href="adatvedelem.html">Adatvédelem</a></li>
-                <li><a href="gyik.html">GYIK</a></li>
+                <li><a href="jogi-tajekoztato.html">Jogi tájékoztató</a></li>
             </ul>
         </div>
 
         <div class="footer-column">
             <h4>Kapcsolat</h4>
             <ul>
-                <li><a href="tel:+36302900882">+36-30-290-08-82</a></li>
-                <li><a href="mailto:kiralye.dani@gmail.com">kiralye.dani@gmail.com</a></li>
-                <li><a href="https://maps.app.goo.gl/UxYSqCgDBpFyrCHb8" target="_blank">6726 Szeged, Szent-Györgyi Albert u. 45</a></li>
+                <li><a href="tel:+36302900882">+36-30-290-0882</a></li>
+                <li><a href="mailto:kiralye.dani@gmail.com">kiralylabapolas@kiralylabapolas.com</a></li>
+                <li><a href="https://maps.app.goo.gl/UxYSqCgDBpFyrCHb8" target="_blank">6723 Szeged, Budapesti krt. 6/A</a></li>
             </ul>
         </div>
 
         <div class="footer-column">
             <h4>Fizetési módok</h4>
             <div class="payment-box">
-                <img src="images/revolut-pay.png" alt="Revolut Pay, Visa, Mastercard, Google Pay, Apple Pay" class="payment-img">
+                <!-- TODO: ha elkészül a hivatalos "images/revolut-pay.png" logó, cseréld vissza <img>-re -->
+                <p class="payment-text">Revolut&nbsp;Pay · Visa · Mastercard · Google&nbsp;Pay · Apple&nbsp;Pay</p>
             </div>
         </div>
     </div>
