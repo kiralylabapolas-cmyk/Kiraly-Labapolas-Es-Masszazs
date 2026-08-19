@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ezoterikus kuckó</title>
-    <link rel="icon" type="image/png" href="images/clean_logo.png?v=1">
+    <title>Király Lábápolás és Masszázs</title>
+    <link rel="icon" type="image/png" href="images/kiraly-favicon.png?v=1">
 
     <link rel="stylesheet" href="massage.css">
     <script src="massage.js" defer></script>
@@ -14,26 +14,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-
-    <script>
-    window.onload = function() {
-        const bookingButtons = document.querySelectorAll('.btn');
-        
-        bookingButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                Calendly.initPopupWidget({
-                    url: 'https://calendly.com/kiralye-dani/masszazs-kezeles'
-                });
-                return false;
-            });
-        });
-    }
-    </script>
-    
 </head>
 <body>
 
@@ -43,8 +23,8 @@
         <div class="container navbar" id="navbar">
 
             <div class="logo">
-                <h1>Ezoterikus</h1>
-                <span>KUCKÓ</span>
+                <h1>Király Lábápolás</h1>
+                <span>és Masszázs</span>
             </div>
 
             <nav id="mainNav">
@@ -57,7 +37,7 @@
                 </ul>
             </nav>
 
-            <a href="#" class="btn">Időpontfoglalás</a>
+            <a href="https://kiraly-labapolas-es-masszazs.salonic.hu" class="btn" target="_blank" rel="noopener">Időpontfoglalás</a>
 
             <button class="nav-toggle" id="navToggle" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="mainNav">
                 <span></span><span></span><span></span>
@@ -79,7 +59,7 @@
             a feszültségtől és visszanyerni az egyensúlyt.
         </p>
 
-        <a href="#" class="btn">Időpontfoglalás</a>
+        <a href="https://kiraly-labapolas-es-masszazs.salonic.hu" class="btn" target="_blank" rel="noopener">Időpontfoglalás</a>
 
     </div>
 
@@ -136,21 +116,36 @@
                 <img src="images/pictures/rolam.png" alt="Edina - Masszőr" width="140" height="140">
             </div>
             <h2>Rólam</h2>
-            <p class="highlight-text">Szia, Edina vagyok. Küldetésem, hogy segítsek megtalálni a testi és lelki egyensúlyt.</p>
-            <p>Több éve foglalkozom különféle masszázstechnikákkal. Hiszem, hogy a masszázs nem csupán a test ellazításáról szól, hanem egy olyan természetes öngyógyító folyamat elindításáról.</p>
+            <p class="highlight-text">A segítés, a segítőkészség mindig is fontos volt számomra. A kezeléseket a TE visszajelzésed alapján végzem &ndash; ez a Te időd! Ez rólad szól!</p>
+            <p>Több éve foglalkozom különféle masszázstechnikákkal. Hiszem, hogy a masszázs nem csupán a test ellazításáról szól, hanem egy természetes öngyógyító folyamat elindításáról is. Masszázsaimat holisztikus szemlélettel végzem.</p>
+            <p>Egy csodálatos embernek köszönhetően a mindennapjaimat a beteg lábak és azok kezelése, valamint a tanulás teszi ki. Úgy érzem, még nagyon az út elején járok, hiszen mindig van hova fejlődni. Jelenleg speciális lábápoló és podológus technikusnak tanulok &ndash; így még teljesebbé tehetem azt a vágyamat, hogy ott segítsek, ahol tudok.</p>
         </div>
 
         <div class="magazine-right">
             <h2>Vélemények</h2>
-            
-            <div class="review-item">
-                <p class="review-quote">"Edina kezei csodákra képesek! A thai olajos masszázs után úgy éreztem magam, mintha újjászülettem volna. Biztosan rendszeres vendég leszek!"</p>
-                <p class="review-user">- Katalin</p>
-            </div>
-            
-            <div class="review-item">
-                <p class="review-quote">"Nagyon tiszta, kellemes és megnyugtató környezet. Profi hozzáállás, a hátfájásom már az első alkalom után rengeteget javult. Csak ajánlani tudom mindenkinek."</p>
-                <p class="review-user">- Gábor</p>
+
+            <!--
+                IDE KELL BEILLESZTENI A VALÓS GOOGLE-VÉLEMÉNYEKET MEGJELENÍTŐ WIDGET KÓDJÁT,
+                ha az élő (automatikusan frissülő) megoldás mellett döntötök (pl. Elfsight,
+                Trustindex, EmbedSocial - Google-fiók összekötéssel). Amíg ez nincs kész, a
+                lenti .reviews-scroll blokk 2 minta-véleményt jelenít meg függőlegesen
+                görgethető sávban - ezt lehet lecserélni a widget saját kódjára, vagy bővíteni
+                további <div class="review-item">...</div> blokkokkal kézzel bemásolt
+                véleményekkel.
+            -->
+
+            <div class="reviews-scroll" id="reviewsScroll">
+
+                <div class="review-item">
+                    <p class="review-quote">"Edina kezei csodákra képesek! A thai olajos masszázs után úgy éreztem magam, mintha újjászülettem volna. Biztosan rendszeres vendég leszek!"</p>
+                    <p class="review-user">- Katalin</p>
+                </div>
+
+                <div class="review-item">
+                    <p class="review-quote">"Nagyon tiszta, kellemes és megnyugtató környezet. Profi hozzáállás, a hátfájásom már az első alkalom után rengeteget javult. Csak ajánlani tudom mindenkinek."</p>
+                    <p class="review-user">- Gábor</p>
+                </div>
+
             </div>
         </div>
 
@@ -373,7 +368,8 @@
     <div class="section-transition">
         <div class="transition-content">
             <span class="transition-line"></span>
-            <span class="transition-label">Speciális lábápolás &amp; Pedikűr</span>
+            <img src="images/kiraly-logo-icon-white.png" alt="" class="transition-icon">
+            <span class="transition-label">Lábápolás &amp; Pedikűr</span>
             <span class="transition-line"></span>
         </div>
     </div>
@@ -490,8 +486,8 @@
             <h4>Kapcsolat</h4>
             <ul>
                 <li><a href="tel:+36302900882">+36-30-290-0882</a></li>
-                <li><a href="mailto:kiralye.dani@gmail.com">kiralylabapolas@kiralylabapolas.com</a></li>
-                <li><a href="https://maps.app.goo.gl/UxYSqCgDBpFyrCHb8" target="_blank">6723 Szeged, Budapesti krt. 6/A</a></li>
+                <li><a href="mailto:kiralylabapolas@kiralylabapolas.com">kiralylabapolas@kiralylabapolas.com</a></li>
+                <li><a href="https://www.google.com/maps/place/Kir%C3%A1ly+L%C3%A1b%C3%A1pol%C3%A1s+%C3%A9s+Massz%C3%A1zs/@46.2673879,20.1642517,17z/data=!3m1!4b1!4m6!3m5!1s0x474489f8a36e9695:0xf2fa89c161ba9609!8m2!3d46.2673842!4d20.1668266!16s%2Fg%2F11zwzh987q?entry=ttu&g_ep=EgoyMDI2MDgxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">6723 Szeged, Budapesti krt. 6/A</a></li>
             </ul>
         </div>
 
@@ -505,7 +501,7 @@
     </div>
 
     <div class="footer-bottom">
-        <p>2026 © Ezoterikus kuckó - Minden jog fenntartva!</p>
+        <p>2026 © Király Lábápolás és Masszázs - Minden jog fenntartva!</p>
     </div>
 </footer>
 
