@@ -609,17 +609,23 @@ nav a:hover{
 }
 
 .pedicure-card-visual{
-    height:110px;
+    height:180px;
     background:linear-gradient(135deg,#e7c9bb 0%,#c98a73 100%);
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    overflow:hidden;
 }
 
-.pedicure-icon{
-    font-family:'Cinzel', serif;
-    font-size:34px;
-    color:#fff;
+.pedicure-card-visual img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* JAVÍTÁS: a "Speciális lábápolás" fotón bal fent egy felirat-tábla van a képen belül -
+   ez a pozicionálás jobbra-lefelé tolja a látható kivágást, hogy a tábla szövege ne
+   látszódjon a kártyán (a cím és leírás úgyis ott van alatta, feleslegessé tenné) */
+.pedikur-specialis-img{
+    object-position:80% 75%;
 }
 
 .pedicure-card .price{
@@ -636,6 +642,52 @@ nav a:hover{
 
 .pedicure-card .info-box{
     border-left-color:#c98a73;
+}
+
+/* IDŐPONTFOGLALÁS CTA (Pedikűr és a lábléc között) */
+
+.booking-cta{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(135deg,#7b8a65 0%,#c98a73 100%);
+}
+
+.booking-cta h2{
+    font-family:'Cinzel', serif;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-size:30px;
+    font-weight:400;
+    color:#fff;
+    margin-bottom:15px;
+}
+
+.booking-cta p{
+    max-width:520px;
+    margin:0 auto 30px auto;
+    color:#fff;
+    opacity:.95;
+}
+
+.booking-cta .btn{
+    background:#fff;
+    color:#7b8a65;
+    font-weight:600;
+}
+
+.booking-cta .btn:hover{
+    background:#f3efe8;
+}
+
+@media(max-width:700px){
+    .booking-cta{
+        padding:55px 20px;
+    }
+
+    .booking-cta h2{
+        font-size:24px;
+        letter-spacing:3px;
+    }
 }
 
 /* JOGI OLDALAK (Adatvédelem, Jogi tájékoztató) */
@@ -753,7 +805,19 @@ nav a:hover{
 }
 
 /* Linkek kinézete */
+/* JAVÍTÁS: !important a betűtípuson, mert a Squarespace tárhely saját, a kód
+   beillesztése után betöltődő stílusai felülírhatják a linkek betűtípusát -
+   enélkül egyes footer-linkek (pl. az oszlop első eleme) más betűtípussal
+   jelenhetnek meg, mint a többi */
+.footer-column,
+.footer-column li {
+    font-family: 'Playfair Display', 'Georgia', serif !important;
+}
+
 .footer-column a {
+    font-family: 'Playfair Display', 'Georgia', serif !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
     color: #e5dfd8;
     text-decoration: none;
     font-size: 15px;
