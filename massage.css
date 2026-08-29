@@ -448,22 +448,26 @@ nav a:hover{
 .card{
     background:white;
     border-radius:20px;
-    overflow:hidden;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
     transition:.3s;
 
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .card:hover{
     transform:translateY(-8px);
 }
 
+/* JAVÍTÁS: a kártya kerekített sarkait mostantól a kép saját border-radiusa
+   adja (nem a szülő overflow:hidden-je), hogy a lenyitott Részletek doboz
+   szabadon "kilóghasson" a kártya alól anélkül, hogy levágná a szülő */
 .card img{
     width:100%;
     height:240px;
     object-fit:cover;
+    border-radius:20px 20px 0 0;
 }
 
 .card-content{
@@ -500,7 +504,6 @@ nav a:hover{
 
 .info-box{
     display: none;
-    margin-top: 15px;
     padding: 15px;
     background-color: #f9fbf7;
     border-radius: 10px;
@@ -509,8 +512,27 @@ nav a:hover{
     color: #555;
 }
 
+/* JAVÍTÁS: a lenyitott Részletek doboz lebegő panelként jelenik meg a kártya
+   alatt (position:absolute), így nem növeli meg a kártya (grid-cella)
+   magasságát - emiatt a többi, ugyanabban a sorban lévő kártya nem "nyúlik
+   meg" vele együtt, csak az, amelyiket ténylegesen lenyitottuk */
 .info-box.open {
     display: block !important;
+    position: absolute;
+    top: 100%;
+    left: 25px;
+    right: 25px;
+    margin-top: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+    z-index: 5;
+}
+
+/* A lenyitott kártyát a szomszédai fölé emeljük, hogy a lebegő panel
+   ne csússzon a következő sor kártyái mögé (a .card-open a JS tartaléka
+   azokra a böngészőkre, ahol a :has() még nem támogatott) */
+.card:has(.info-box.open),
+.card.card-open{
+    z-index: 30;
 }
 
 .info-btn{
@@ -611,6 +633,7 @@ nav a:hover{
     height:180px;
     background:linear-gradient(135deg,#e7c9bb 0%,#c98a73 100%);
     overflow:hidden;
+    border-radius:20px 20px 0 0;
 }
 
 .pedicure-card-visual img{
@@ -1058,6 +1081,11 @@ nav a:hover{
 
     .card-content{
         padding:20px;
+    }
+
+    .info-box.open{
+        left:20px;
+        right:20px;
     }
 
     .footer-container{
