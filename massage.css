@@ -451,10 +451,9 @@ nav a:hover{
     overflow:hidden;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
     transition:.3s;
-    
+
     display: flex;
     flex-direction: column;
-    min-height: 480px;
 }
 
 .card:hover{
